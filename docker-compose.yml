@@ -1,0 +1,12 @@
+version: '3'
+services:
+  config-server-new:
+    build: .
+    ports:
+      - "9090:9090"
+    volumes:
+    - ./ssh/:/root/.ssh/
+    environment:
+     - SPRING_PROFILES_ACTIVE=docker,native
+     - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=git@github.com:deanstzhelev/config-server-private.git
+
