@@ -3,7 +3,7 @@ Spring cloud config server
 
 ## Installation
 - clone the current repo
-- gradle build the project
+- gradle build
 - build docker image :
 ``` 
 docker build --file=Dockerfile --tag=config-service-new:latest --rm=true .
